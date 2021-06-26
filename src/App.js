@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Expenses from "./components/expenses/Expenses";
+import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense.component";
 const dummy_expenses = [
   {
@@ -8,21 +8,26 @@ const dummy_expenses = [
     amount: 94.12,
     date: new Date(2020, 7, 14),
   },
-  { id: "e2", title: "New TV", amount: 799.49, date: new Date(2021, 2, 12) },
+  {
+    id: "e2",
+    title: "New TV",
+    amount: 799.49,
+    date: new Date(2021, 2, 12),
+  },
   {
     id: "e3",
     title: "Car Insurance",
     amount: 294.67,
-    date: new Date(2021, 2, 28),
+    date: new Date(2022, 2, 28),
   },
   {
     id: "e4",
     title: "New Desk (Wooden)",
     amount: 450,
-    date: new Date(2021, 5, 12),
+    date: new Date(2020, 5, 12),
   },
 ];
-function App() {
+const App = () => {
   const [expenses, updatedExpense] = useState(dummy_expenses);
 
   const addExpenseHandler = (expense) => {
@@ -37,6 +42,6 @@ function App() {
       <Expenses items={expenses} />
     </div>
   );
-}
+};
 
 export default App;

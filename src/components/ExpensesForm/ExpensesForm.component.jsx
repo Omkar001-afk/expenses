@@ -42,7 +42,7 @@ const ExpensesForm = (props) => {
           <input
             type="number"
             min="0.01"
-            step="0.01"
+            step="0.01" //used to check whether entered no. is valid or not
             value={currentAmount}
             onChange={AmountChangeHandler}
           />
@@ -59,7 +59,10 @@ const ExpensesForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
-        <button type="submit">Add Expense</button>
+        <button type="button" onClick={props.onCancel}>
+          Cancel
+        </button>
+        <button type="submit">Add Expenses</button>
       </div>
     </form>
   );

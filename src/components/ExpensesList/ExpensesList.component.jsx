@@ -1,6 +1,6 @@
 import React from "react";
 import "./ExpensesList.styles.css";
-import ExpenseItem from "../Expenseitem/ExpenseItem";
+import ExpenseItem from "../ExpenseItem/ExpenseItem";
 const ExpenseList = (props) => {
   if (props.items.length === 0) {
     return <h2 className="expenses-list__fallback">Found no Expenses.</h2>;
